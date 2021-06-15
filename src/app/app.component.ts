@@ -1,4 +1,5 @@
-import { TemplateRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, TemplateRef } from '@angular/core';
+import { OnInit } from '@angular/core';
 import { Component, ViewChild } from '@angular/core';
 import { ModalService, ModalRef } from './shared/components/modal/services/modal.service';
 
@@ -7,23 +8,21 @@ import { ModalService, ModalRef } from './shared/components/modal/services/modal
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent{
 
   @ViewChild('modal') public modalTemplateRef: TemplateRef<any>;
-  @ViewChild('template1') public template1: TemplateRef<any>;
-  @ViewChild('template2') public template2: TemplateRef<any>;
-
   title = 'a11y-p2';
 
   public modalRef: ModalRef
 
-  constructor( private modalService: ModalService ){ }
+  constructor( private modalService: ModalService ) { }
+
 
   public show(): void {
+
       this.modalRef = this.modalService.open({
         templateRef: this.modalTemplateRef,
         title: 'User Details'
-      })
+      });
   }
-
 }

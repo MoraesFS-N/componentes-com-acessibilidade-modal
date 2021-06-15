@@ -1,4 +1,3 @@
-import { TemplateRef } from "@angular/core";
 import { Component } from "@angular/core";
 import { ModalConfig } from "./interfaces/modal-config";
 
