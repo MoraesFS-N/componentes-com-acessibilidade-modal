@@ -13,7 +13,7 @@ export class AppComponent{
   @ViewChild('modal') public modalTemplateRef: TemplateRef<any>;
   title = 'a11y-p2';
 
-  public modalRef: ModalRef
+  public modalRef: ModalRef;
 
   constructor( private modalService: ModalService ) { }
 

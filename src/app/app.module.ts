@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ModalModule } from './shared/components/modal/modal.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { ModalModule } from './shared/components/modal/modal.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule
+    ModalModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
